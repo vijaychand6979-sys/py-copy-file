@@ -1,8 +1,10 @@
 def copy_file(command: str) -> None:
-    if len(command.split()) != 3:
+    commands = command.split()
+
+    if len(commands) != 3:
         return
 
-    cmd, file_in, file_out = command.split()
+    cmd, file_in, file_out = commands
 
     if file_in != file_out and cmd == "cp":
         try:
